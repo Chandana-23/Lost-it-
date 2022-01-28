@@ -23,7 +23,7 @@ def claim(request,pk):
         d.claim = True
         d.save()
         subject = 'Lost it!'
-        message = 'Kindly contact AEC for your lost item'
+        message = 'Kindly contact AEC for your lost item. Your Item id is '+str(pk)
         from_email = 'chandanasamineni23@gmail.com'
         recipient_list = ['chandanasamineni23@gmail.com']
         send_mail(subject,message,from_email,recipient_list)
